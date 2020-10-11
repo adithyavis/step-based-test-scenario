@@ -1,6 +1,5 @@
 // import App from "next/app";
 import type { AppProps /*, AppContext */ } from "next/app"
-
 import { createGlobalStyle } from "styled-components"
 
 const GlobalStyle = createGlobalStyle`
