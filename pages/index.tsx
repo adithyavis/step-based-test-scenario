@@ -3,6 +3,7 @@ import { faFlagCheckered } from "@fortawesome/free-solid-svg-icons"
 import Head from "next/head"
 import styled from "styled-components"
 import StepCard from "../components/StepCard"
+import Arrow, { ARROW_HEAD_WIDTH } from "../components/Arrow"
 
 export default function Home() {
   return (
@@ -12,10 +13,15 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Main>
+        <h1>Scenario Editor</h1>
+        <p>Total steps: {20}</p>
         <Wrapper>
           {Array.from({ length: 20 }).map((_, idx) => (
             <StepCardWrapper key={idx}>
-              <StepCard />
+              <StepCard stepNumber={idx + 1} />
+              <ArrowWrapper>
+                <Arrow />
+              </ArrowWrapper>
             </StepCardWrapper>
           ))}
           <FinishCardWrapper>
@@ -31,14 +37,24 @@ export default function Home() {
 }
 
 const Main = styled.main`
-  padding: 5rem;
+  padding: 2.5rem 5rem;
 `
 const Wrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
 `
+const ARROW_WIDTH = "3.25rem"
 const StepCardWrapper = styled.div`
-  margin: 1.25rem 2.5rem 0 0;
+  position: relative;
+  margin: 1.25rem calc(${ARROW_WIDTH} - ${ARROW_HEAD_WIDTH}) 0 0;
+  display: flex;
+`
+const ArrowWrapper = styled.div`
+  position: absolute;
+  right: 0;
+  transform: translate(100%, -50%);
+  top: 50%;
+  width: ${ARROW_WIDTH};
 `
 const FinishCardWrapper = styled(StepCardWrapper)`
   display: flex;
