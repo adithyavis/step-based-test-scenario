@@ -4,8 +4,17 @@ import Head from "next/head"
 import styled from "styled-components"
 import StepCard from "../components/StepCard"
 import Arrow, { ARROW_HEAD_WIDTH } from "../components/Arrow"
+import { getScenario } from "./api/scenario"
+import { InferGetServerSidePropsType } from "next"
 
-export default function Home() {
+export const getServerSideProps = async () => {
+  return { props: getScenario() }
+}
+
+export default function Home({
+  name,
+  steps,
+}: InferGetServerSidePropsType<typeof getServerSideProps>) {
   return (
     <>
       <Head>
@@ -13,12 +22,12 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Main>
-        <h1>Scenario Editor</h1>
-        <p>Total steps: {20}</p>
+        <h1>{name}</h1>
+        <p>Total steps: {steps.length}</p>
         <Wrapper>
-          {Array.from({ length: 20 }).map((_, idx) => (
-            <StepCardWrapper key={idx}>
-              <StepCard stepNumber={idx + 1} />
+          {steps.map((step, idx) => (
+            <StepCardWrapper key={step.id}>
+              <StepCard step={step} stepNumber={idx + 1} />
               <ArrowWrapper>
                 <Arrow />
               </ArrowWrapper>

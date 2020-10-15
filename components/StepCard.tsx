@@ -1,12 +1,32 @@
 import styled from "styled-components"
+import { Keyword, Step } from "../pages/api/scenario"
 
-export default function StepCard({ stepNumber }: { stepNumber: number }) {
+export default function StepCard({
+  step,
+  stepNumber,
+}: {
+  step: Step
+  stepNumber: number
+}) {
   return (
     <Wrapper>
       <StepNumber>{stepNumber}</StepNumber>
-      https://stg-app.autify.com/users/password/new
+      {getStepCardText(step)}
     </Wrapper>
   )
+}
+
+function getStepCardText(step: Step) {
+  switch (step.keyword) {
+    case Keyword.Visit:
+      return `Visit "${step.value}"`
+    case Keyword.InputText:
+      return `Input "${step.value}"`
+    case Keyword.ClickElement:
+      return "Click element"
+    default:
+      return "Unknown error"
+  }
 }
 
 const Wrapper = styled.div`
