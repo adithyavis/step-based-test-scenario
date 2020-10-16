@@ -8,6 +8,8 @@ module.exports = {
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
     "plugin:jsx-a11y/recommended",
+    "plugin:jest/recommended",
+    "plugin:testing-library/recommended",
     "prettier",
     "prettier/@typescript-eslint",
     "prettier/react",
@@ -16,6 +18,7 @@ module.exports = {
     es6: true,
     browser: true,
     node: true,
+    jest: true,
   },
   settings: {
     react: {
