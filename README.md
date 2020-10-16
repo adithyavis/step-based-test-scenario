@@ -20,6 +20,7 @@
 #### Rules
 
 - You **cannot** remove any dependency we provide
+- You **cannot** modify `/pages/api`
 - You can add any dependency you want
 - You can modify the code, or project structure, however you want
 - You can reach out to us if you have any question
