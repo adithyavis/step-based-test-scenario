@@ -14,11 +14,13 @@
 
 - Implement step detail panel
   - Design: <ZEPLIN_LINK>
-  - Step detail panel has to be below the open step card row, and the arrow has to be below the open step card.
+  - Step detail panel has to be below the open step card row, and the arrow has to be below the open step card
   - When the step is a step group, show step rows inside the step group detail panel
+  - First step can switch between Visit step and Execute Step Group step
 
 #### Rules
 
+- We'll test the website only on Chrome Stable for macOS, with the viewport size of 1280x800
 - You **cannot** remove any dependency we provide
 - You **cannot** modify `/pages/api`
 - You can add any dependency you want

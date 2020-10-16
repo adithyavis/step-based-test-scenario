@@ -11,7 +11,7 @@ export default function StepCard({
   return (
     <Wrapper>
       <StepNumber>{stepNumber}</StepNumber>
-      {getStepCardText(step)}
+      <StepCardText>{getStepCardText(step)}</StepCardText>
     </Wrapper>
   )
 }
@@ -59,4 +59,10 @@ const StepNumber = styled.div`
   align-items: center;
   justify-content: center;
   transform: translate(-50%, -50%);
+`
+const StepCardText = styled.div`
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 `
