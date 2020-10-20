@@ -11,7 +11,8 @@
     "lint": "eslint --max-warnings=0 --ext .js,.jsx,.ts,.tsx .",
     "type-check": "lerna run type-check",
     "test": "lerna run test",
-    "test-all": "yarn format:check && yarn lint && yarn type-check && yarn test"
+    "build": "lerna run build",
+    "test-all": "yarn format:check && yarn lint && yarn type-check && yarn test && yarn build"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "4.5.0",

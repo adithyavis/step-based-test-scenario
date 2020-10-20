@@ -4,10 +4,10 @@ import Head from "next/head"
 import styled from "styled-components"
 import StepCard from "../components/StepCard"
 import Arrow, { ARROW_HEAD_WIDTH } from "../components/Arrow"
-import { InferGetServerSidePropsType } from "next"
+import { GetServerSideProps, InferGetServerSidePropsType } from "next"
 import { Scenario } from "@iaf/api"
 
-export const getServerSideProps = async () => {
+export const getServerSideProps: GetServerSideProps<Scenario> = async () => {
   const res = await fetch(`http://localhost:8080/scenario`)
   const { name, steps } = (await res.json()) as Scenario
   return { props: { name, steps } }
