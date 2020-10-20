@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "private": true,
   "description": "API for frontend interview assignment",
+  "main": "build/index.js",
   "scripts": {
     "watch": "tsc --watch",
     "dev": "nodemon build/index.js",
-    "build": "tsc -p tsconfig.json",
+    "build": "tsc",
     "start": "node build/index.js"
   },
   "dependencies": {

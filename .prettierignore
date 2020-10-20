@@ -1,2 +1,6 @@
+# api
+build/
+
+# app-react
 .next/
 out/
