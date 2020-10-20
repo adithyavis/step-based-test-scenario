@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { Keyword, Step } from "../pages/api/scenario"
+import { Keyword, Step } from "@iaf/api/build/types"
 
 export default function StepCard({
   step,
@@ -22,8 +22,6 @@ function getStepCardText(step: Step) {
       return `Visit "${step.value}"`
     case Keyword.InputText:
       return `Input "${step.value}"`
-    case Keyword.ClickElement:
-      return "Click element"
     default:
       return "Unknown error"
   }

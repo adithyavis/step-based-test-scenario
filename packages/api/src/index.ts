@@ -1,21 +1,12 @@
 import "make-promises-safe"
 import fastify from "fastify"
+import { Keyword, Scenario } from "./types"
 
 const server = fastify({ logger: true })
 
 server.get("/", async () => {
   return { hello: "world" }
 })
-
-export enum Keyword {
-  Visit,
-  InputText,
-}
-export type Step = { id: string; keyword: Keyword; value: string }
-export type Scenario = {
-  name: string
-  steps: Step[]
-}
 
 server.get(
   "/scenario",

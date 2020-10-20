@@ -8,7 +8,7 @@ export default function Arrow() {
     </Wrapper>
   )
 }
-const Wrapper = styled.div<{ width?: string }>`
+const Wrapper = styled.div`
   display: flex;
   width: 100%;
   align-items: center;

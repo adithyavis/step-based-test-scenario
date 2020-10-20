@@ -12,6 +12,9 @@
     "test": "jest"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "1.2.32",
+    "@fortawesome/free-solid-svg-icons": "5.15.1",
+    "@fortawesome/vue-fontawesome": "2",
     "@nuxt/typescript-runtime": "2.0.0",
     "core-js": "3.6.5",
     "nuxt": "2.14.6"
@@ -23,6 +26,7 @@
     "@nuxtjs/eslint-config-typescript": "3.0.0",
     "@nuxtjs/eslint-module": "2.0.0",
     "@nuxtjs/stylelint-module": "4.0.0",
+    "@testing-library/vue": "5.1.0",
     "@vue/test-utils": "1.1.0",
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "10.1.0",

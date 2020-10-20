@@ -1,7 +1,7 @@
 import React from "react"
 import { render } from "@testing-library/react"
 import Index from "./index"
-import { Keyword } from "@iaf/api"
+import { Keyword } from "@iaf/api/build/types"
 
 test("renders finish card", () => {
   const { getByText } = render(
