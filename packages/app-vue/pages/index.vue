@@ -29,6 +29,7 @@ import { library } from "@fortawesome/fontawesome-svg-core"
 import { faFlagCheckered } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome"
 import { Scenario } from "@iaf/api"
+import "@fortawesome/fontawesome-svg-core/styles.css"
 
 library.add(faFlagCheckered)
 
