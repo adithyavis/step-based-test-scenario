@@ -6,9 +6,9 @@
   "main": "build/index.js",
   "scripts": {
     "watch": "tsc --watch",
-    "dev": "nodemon build/index.js",
+    "dev": "nodemon build/server.js",
     "build": "tsc",
-    "start": "node build/index.js"
+    "start": "node build/server.js"
   },
   "dependencies": {
     "fastify": "3.7.0",

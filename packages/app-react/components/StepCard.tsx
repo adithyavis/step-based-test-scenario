@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { Keyword, Step } from "@iaf/api/build/types"
+import { Keyword, Step } from "@iaf/api"
 
 export default function StepCard({
   step,

@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/vue"
-import { Keyword } from "@iaf/api/build/types"
+import { Keyword } from "@iaf/api"
 import StepCard from "./StepCard.vue"
 
 test("renders visit URL text", () => {

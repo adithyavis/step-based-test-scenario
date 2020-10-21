@@ -5,7 +5,7 @@ import styled from "styled-components"
 import StepCard from "../components/StepCard"
 import Arrow, { ARROW_HEAD_WIDTH } from "../components/Arrow"
 import { GetServerSideProps, InferGetServerSidePropsType } from "next"
-import { Scenario } from "@iaf/api/build/types"
+import { Scenario } from "@iaf/api"
 
 export const getServerSideProps: GetServerSideProps<Scenario> = async () => {
   const res = await fetch(`http://localhost:8080/scenario`)

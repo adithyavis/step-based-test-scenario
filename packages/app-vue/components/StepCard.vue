@@ -6,7 +6,7 @@
 </template>
 
 <script lang="ts">
-import { Keyword, Step } from "@iaf/api/build/types"
+import { Keyword, Step } from "@iaf/api"
 
 export default {
   props: {
