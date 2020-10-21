@@ -1,44 +1,61 @@
-## Frontend Interview Assignment
+# Frontend Interview Assignment
 
-### Instruction
+## Table of Contents
 
-#### What we provide
+- [Instruction](#Instruction)
+- [Development](#Development)
+
+## Instruction
+
+### What we provide
 
 - Basic project infrastructure
+- The design for the UI in `/design`
+  - Open `/design/index.html` in a browser to see the inspectable design
 - A page with step cards rendered
   - Step data will be fetched from the server side on page request
-- An API to get an array of minimal step group data
-- An API to get a step group by ID
+- An API to get a random email address
 
-#### What you have to do
+### What you have to do
 
-- Implement step detail panel
-  - Design: <ZEPLIN_LINK>
-  - Step detail panel has to be below the open step card row, and the arrow has to be below the open step card
-  - When the step is a step group, show step rows inside the step group detail panel
-  - First step can switch between Visit step and Execute Step Group step
+- Implement step detail panel in either `/packages/app-react` or `/packages/app-vue`
+  - Choose either React.js or Vue.js and work on the corresponding starting app we provide
+- The panel should look like the design we provide
+- The panel can be open when clicking on `InputText` step.
+- When edit the text in the panel, the text in step card should also be updated
+- The type of input can be changed from `Given value`, which is a free text, to `Random email address`, which is an email address generated from the api.
 
-#### Rules
+### Rules
 
 - We'll test the website only on Chrome Stable for macOS, with the viewport size of 1280x800
 - You **cannot** remove any dependency we provide
-- You **cannot** modify `/pages/api`
+- You **cannot** modify `/packages/api`
 - You can add any dependency you want
 - You can modify the code, or project structure, however you want
 - You can reach out to us if you have any question
+- We'll judge the final result based on:
+  - How well the UI work, the UX when using it
+  - How it being tested
+  - How the code is structured, its readability
 
-### Development
+## Development
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+### Prerequisite
 
-### Getting Started
+1. [Node.js 14.14.0](https://nodejs.org/en/) - The version is also specified in `.nvmrc`
+2. [Yarn 1.22.10](https://classic.yarnpkg.com/en/)
 
-First, run the development server:
+### Installation
 
-```bash
-yarn dev
-```
+1. `yarn install`
+2. `yarn build`
+3. `yarn test-all` - To ensure that everything work fine at the start
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Starting the app
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+1. `yarn start:api`
+   - To start the API server for the app to use
+   - See `/packages/api/README.md` for more info on the available endpoint
+2. See the `README.md` in the app you want to work on to learn how to develop it.
+   - `/packages/app-react/README.md`
+   - `/packages/app-vue/README.md`
