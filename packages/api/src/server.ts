@@ -1,8 +1,11 @@
 import "make-promises-safe"
 import fastify from "fastify"
-import { Keyword, Scenario } from "./types"
+import fastifyCors from "fastify-cors"
+import { Email, Keyword, Scenario } from "./types"
 
 const server = fastify({ logger: true })
+
+server.register(fastifyCors, {})
 
 server.get("/", async () => {
   return { hello: "world" }
@@ -12,6 +15,7 @@ server.get(
   "/scenario",
   async (): Promise<Scenario> => {
     return {
+      id: "sc1",
       name: "Scenario A",
       steps: [
         {
@@ -26,6 +30,16 @@ server.get(
         { id: "6", keyword: Keyword.InputText, value: "test5" },
         { id: "7", keyword: Keyword.InputText, value: "test6" },
       ],
+    }
+  }
+)
+
+server.get(
+  "/email",
+  async (): Promise<Email> => {
+    return {
+      id: `e${Date.now()}`,
+      address: `e${Date.now()}@example.com`,
     }
   }
 )

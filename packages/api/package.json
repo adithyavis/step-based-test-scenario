@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "fastify": "3.7.0",
+    "fastify-cors": "4.1.0",
     "make-promises-safe": "5.1.0"
   },
   "devDependencies": {
