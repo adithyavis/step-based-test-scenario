@@ -15,9 +15,11 @@
     "@nuxt/typescript-runtime": "2.0.0",
     "@nuxtjs/fontawesome": "1.1.2",
     "core-js": "3.6.5",
-    "nuxt": "2.14.7"
+    "nuxt": "2.14.7",
+    "vue": "2.6.12"
   },
   "devDependencies": {
+    "@babel/core": "7.12.3",
     "@nuxt/types": "2.14.7",
     "@nuxt/typescript-build": "2.0.3",
     "@nuxtjs/eslint-config": "4.0.0",
@@ -29,13 +31,15 @@
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "10.1.0",
     "babel-jest": "26.6.0",
-    "eslint-config-prettier": "6.13.0",
+    "eslint-config-prettier": "6.14.0",
     "eslint-plugin-nuxt": "1.0.0",
     "jest": "26.6.0",
     "stylelint": "13.7.2",
     "stylelint-config-prettier": "8.0.2",
     "stylelint-config-standard": "20.0.0",
     "ts-jest": "26.4.1",
-    "vue-jest": "3.0.7"
+    "vue-jest": "3.0.7",
+    "vue-template-compiler": "2",
+    "webpack": "5.1.3"
   }
 }
