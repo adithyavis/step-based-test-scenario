@@ -25,7 +25,14 @@ export default {
     "@nuxt/typescript-build",
     // https://go.nuxtjs.dev/stylelint
     "@nuxtjs/stylelint-module",
+    "@nuxtjs/fontawesome",
   ],
+
+  fontawesome: {
+    icons: {
+      solid: ["faFlagCheckered"],
+    },
+  },
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [],
