@@ -36,7 +36,6 @@
 ### Rules
 
 - We'll test the website only on Chrome Stable for macOS, with the viewport size of 1280x800
-- You **cannot** remove any dependency we provide
 - You **cannot** modify `/packages/api`
 - You can add any dependency you want
 - You can modify the code, or project structure, however you want
@@ -50,7 +49,7 @@
 
 ### Prerequisite
 
-1. [Node.js 14.14.0](https://nodejs.org/en/) - The version is also specified in `.nvmrc`
+1. [Node.js 15.0.1](https://nodejs.org/en/) - The version is also specified in `.nvmrc`
 2. [Yarn 1.22.10](https://classic.yarnpkg.com/en/)
 
 ### Installation
