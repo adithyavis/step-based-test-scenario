@@ -7,6 +7,13 @@
 
 ## Instruction
 
+### Do this first - Setup a repository for interviewing
+
+1. Create an initial commit with this starting project
+2. Create a private repository in your own GitHub account
+3. Push this project to that repository
+4. Invite @lukyth and @moriyak as a collaborator
+
 ### What we provide
 
 - Basic project infrastructure
@@ -20,6 +27,7 @@
 
 - Implement step detail panel in either `/packages/app-react` or `/packages/app-vue`
   - Choose either React.js or Vue.js and work on the corresponding starting app we provide
+  - React.js is preferrable, but if you feel a lot more confident in Vue.js, you can use that as well (that's why we provide a starting project in Vue.js as well to save you some time 😄)
 - The panel should look like the design we provide
 - The panel can be open when clicking on `InputText` step.
 - When edit the text in the panel, the text in step card should also be updated
