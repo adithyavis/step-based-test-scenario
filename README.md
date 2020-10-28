@@ -17,7 +17,7 @@
 
 ### About the task
 
-We'd like you to implement a feature to a small SPA.
+We'd like you to implement a feature to a small application.
 The application included in this repo shows a test scenario for E2E testing in a step-by-step style.
 To make things simpler, it supports only two kinds of operation -- "Visit" some page and "Input" text to the page.
 
