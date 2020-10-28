@@ -5,7 +5,6 @@
 - [Instruction](#Instruction)
 - [Development](#Development)
 
-
 ## Instruction
 
 ### Do this first - Setup a repository for interviewing
@@ -28,6 +27,7 @@ The task is to make the text to input in "Input" steps editable.
   - React.js is preferrable, but if you feel a lot more confident in Vue.js, you can use that as well (that's why we provide a starting project in Vue.js as well to save you some time 😄)
 - The panel should look like the design we provide
 - The panel can be open when clicking on "Input" step.
+- The panel should be open _below the row of the open step_. You can see an example of the interaction at `/design/example.gif`.
 - When edit the text in the panel, the text in step card should also be updated
 - The type of input can be changed from `Given value`, which is a free text, to `Random email address`, which is an email address generated from the api.
 
