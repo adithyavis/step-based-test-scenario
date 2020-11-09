@@ -24,7 +24,7 @@ The task is to make the text to input in "Input" steps editable.
 
 - Implement step edit panel in either `/packages/app-react` or `/packages/app-vue`
   - Choose either React.js or Vue.js and work on the corresponding starting app we provide
-  - React.js is preferrable, but if you feel a lot more confident in Vue.js, you can use that as well (that's why we provide a starting project in Vue.js as well to save you some time 😄)
+  - React.js is preferable, but if you feel a lot more confident in Vue.js, you can use that as well (that's why we provide a starting project in Vue.js as well to save you some time 😄)
 - The panel should look like the design we provide
 - The panel can be open when clicking on "Input" step.
 - The panel should be open _below the row of the open step_. You can see an example of the interaction at `/design/example.gif`.
