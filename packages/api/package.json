@@ -1,6 +1,6 @@
 {
   "name": "@iaf/api",
-  "version": "1.0.0",
+  "version": "0.3.0",
   "private": true,
   "description": "API for frontend interview assignment",
   "main": "build/index.js",
