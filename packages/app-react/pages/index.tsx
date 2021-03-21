@@ -7,10 +7,9 @@ import Arrow, { ARROW_HEAD_WIDTH } from "../components/Arrow"
 import { GetServerSideProps, InferGetServerSidePropsType } from "next"
 import { Scenario } from "@iaf/api"
 
-export const getServerSideProps: GetServerSideProps<Pick<
-  Scenario,
-  "name" | "steps"
->> = async () => {
+export const getServerSideProps: GetServerSideProps<
+  Pick<Scenario, "name" | "steps">
+> = async () => {
   const res = await fetch(`http://localhost:8080/scenario`)
   const { name, steps } = (await res.json()) as Scenario
   return { props: { name, steps } }

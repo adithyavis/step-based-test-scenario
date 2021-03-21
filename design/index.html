@@ -7911,12 +7911,12 @@
                   borders.push(self.colorItem(border.color))
                 } else {
                   borders.push('<div class="colors gradient">')
-                  $.each(border.gradient.colorStops, function (
-                    index,
-                    gradient
-                  ) {
-                    borders.push(self.colorItem(gradient.color))
-                  })
+                  $.each(
+                    border.gradient.colorStops,
+                    function (index, gradient) {
+                      borders.push(self.colorItem(gradient.color))
+                    }
+                  )
                   borders.push("</div>")
                 }
                 borders.push("</div>")

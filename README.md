@@ -56,7 +56,7 @@ The task is to make the text to input in "Input" steps editable.
 
 ### Prerequisite
 
-1. [Node.js 15.0.1](https://nodejs.org/en/) - The version is also specified in `.nvmrc`
+1. [Node.js 15.12.0](https://nodejs.org/en/) - The version is also specified in `.nvmrc`
 2. [Yarn 1.22.10](https://classic.yarnpkg.com/en/)
 
 ### Installation
