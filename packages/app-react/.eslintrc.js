@@ -6,7 +6,6 @@ module.exports = {
     "plugin:jsx-a11y/recommended",
     "plugin:jest/recommended",
     "plugin:testing-library/recommended",
-    "prettier/react",
   ],
   ignorePatterns: [".next/", "out/"],
   env: {
