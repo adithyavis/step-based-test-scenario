@@ -10,4 +10,10 @@ module.exports = {
     browser: true,
     node: true,
   },
+  overrides: [
+    {
+      files: ["**/?(*.)+(spec|test).[jt]s?(x)"],
+      extends: ["plugin:testing-library/vue"],
+    },
+  ],
 }

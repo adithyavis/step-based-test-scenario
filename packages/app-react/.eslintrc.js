@@ -5,7 +5,6 @@ module.exports = {
     "plugin:react-hooks/recommended",
     "plugin:jsx-a11y/recommended",
     "plugin:jest/recommended",
-    "plugin:testing-library/recommended",
   ],
   ignorePatterns: [".next/", "out/"],
   env: {
@@ -22,4 +21,10 @@ module.exports = {
   rules: {
     "react/react-in-jsx-scope": "off", // NextJS make it possible to use JSX without importing React
   },
+  overrides: [
+    {
+      files: ["**/?(*.)+(spec|test).[jt]s?(x)"],
+      extends: ["plugin:testing-library/react"],
+    },
+  ],
 }

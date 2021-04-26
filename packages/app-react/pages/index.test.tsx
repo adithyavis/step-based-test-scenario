@@ -1,10 +1,10 @@
 import React from "react"
-import { render } from "@testing-library/react"
+import { render, screen } from "@testing-library/react"
 import Index from "./index"
 import { Keyword } from "@iaf/api"
 
 test("renders finish card", () => {
-  const { getByText } = render(
+  render(
     <Index
       name="Scenario A"
       steps={[
@@ -12,6 +12,6 @@ test("renders finish card", () => {
       ]}
     />
   )
-  const finishCardElement = getByText(/Finish/i)
+  const finishCardElement = screen.getByText(/Finish/i)
   expect(finishCardElement).toBeInTheDocument()
 })
