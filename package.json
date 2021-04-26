@@ -15,23 +15,19 @@
     "test-all": "yarn format:check && yarn lint && yarn type-check && yarn test && yarn build",
     "start:api": "yarn workspace @iaf/api start",
     "start:app-react": "yarn workspace @iaf/app-react start",
-    "start:app-vue": "yarn workspace @iaf/app-vue start"
+    "start:app-vue": "yarn workspace @iaf/app-vue start",
+    "prepare": "husky install"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "4.22.0",
     "@typescript-eslint/parser": "4.22.0",
     "eslint": "7.25.0",
     "eslint-config-prettier": "8.3.0",
-    "husky": "4.3.8",
+    "husky": "6.0.0",
     "lerna": "4.0.0",
     "lint-staged": "10.5.4",
     "prettier": "2.2.1",
     "typescript": "4.2.4"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
   },
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"
