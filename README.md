@@ -12,7 +12,7 @@
 1. Create an initial commit with this starting project
 2. Create a private repository in your own GitHub account
 3. Push this project to that repository
-4. Invite @lukyth and @moriyak as a collaborator
+4. Invite @tai2 and @oguzgelal as a collaborator
 
 ### About the task
 
@@ -42,13 +42,14 @@ The task is to make the text to input in "Input" steps editable.
 
 ### Rules
 
-- We'll test the website only on Chrome Stable for macOS, with the viewport size of 1280x800
+- We'll test the website only on Chrome Stable for macOS, with the viewport size between 1280x800 to 1400x1050
 - You **cannot** modify `/packages/api`
 - You can add any dependency you want
 - You can modify the code, or project structure, however you want
 - You can reach out to us if you have any question
 - We'll judge the final result based on:
   - How well the UI work, the UX when using it
+  - How accurate the UI is to the design
   - How it being tested
   - How the code is structured, its readability
 
@@ -56,7 +57,7 @@ The task is to make the text to input in "Input" steps editable.
 
 ### Prerequisite
 
-1. [Node.js 15.12.0](https://nodejs.org/en/) - The version is also specified in `.nvmrc`
+1. [Node.js 16.0.0](https://nodejs.org/en/) - The version is also specified in `.nvmrc`
 2. [Yarn 1.22.10](https://classic.yarnpkg.com/en/)
 
 ### Installation
