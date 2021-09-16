@@ -52,6 +52,9 @@ The task is to make the text to input in "Input" steps editable.
   - How accurate the UI is to the design
   - How it being tested
   - How the code is structured, its readability
+- Please add plenty of comments or write documents more than usual.
+  - Explain your intent precisely as if you explained it for novices.
+  - This can prevent overlooking your intent and reduce the possibility of misjudge.
 
 ## Development
 
