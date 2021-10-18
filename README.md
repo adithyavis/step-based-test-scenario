@@ -14,11 +14,11 @@ To make things simpler, it supports only two kinds of operation -- "Visit" some 
 
 The tasks I have completed are-
 
-- Implement step edit panel in react
-- The panel looks like the provided design
+- Implement step edit panel in react.
+- The panel looks like the provided design.
 - The panel can be open when clicking on "Input" step.
-- The panel should be open _below the row of the open step_. An example of the interaction is at `/design/example.gif`.
-- When edit the text in the panel, the text in step card should also be updated
+- The panel will open _below the row of the open step_. I implemented this using absolute positioning. An example of the interaction is at `/design/example.gif`.
+- When edit the text in the panel, the text in step card is also be updated
 - The type of input can be changed from `Given value`, which is a free text, to `Random email address`, which is an email address generated from the api.
 
 ## Development
