@@ -60,7 +60,9 @@ export default function Home({
               </StepCardWrapper>
               {/* Show the edit panel only if editPanelStepId is equal to the step's id */}
               {step.id === editPanelStepId && (
-                <StepEditPanelWrapper>
+                <StepEditPanelWrapper
+                  data-testid={`edit-panel-wrapper-${step.id}`}
+                >
                   <></>
                 </StepEditPanelWrapper>
               )}

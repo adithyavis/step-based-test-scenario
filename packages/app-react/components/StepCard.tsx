@@ -11,7 +11,7 @@ export default function StepCard({
   onClick: () => void
 }) {
   return (
-    <Wrapper onClick={onClick}>
+    <Wrapper onClick={onClick} data-testid={`step-card-${step.id}`}>
       <StepNumber>{stepNumber}</StepNumber>
       <StepCardText>{getStepCardText(step)}</StepCardText>
     </Wrapper>
