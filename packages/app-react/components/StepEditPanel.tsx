@@ -3,14 +3,17 @@ import styled from "styled-components"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faTimes } from "@fortawesome/free-solid-svg-icons"
 import { Step, Keyword } from "@iaf/api"
+import { fetchEmail } from "../utils/fetch"
 
 const allTypes = [Keyword.InputText, Keyword.Visit]
 
 export default function StepEditPanel({
   step,
+  setSteps,
   closeEditPanel,
 }: {
   step: Step
+  setSteps: (callback: (args: Step[]) => Step[]) => void
   closeEditPanel: () => void
 }) {
   // type is the keyword of the current step, either Visit or InputValue
@@ -19,6 +22,17 @@ export default function StepEditPanel({
   const [shouldShowTypesDropdown, toggleShowTypesDropdown] = useState<boolean>(
     false
   )
+
+  const updateStep = ({ type, value }: { type: Keyword; value: string }) => {
+    setSteps((prevVal: Step[]) =>
+      prevVal.map((item: Step) => {
+        if (item.id === step.id) {
+          return { ...item, keyword: type, value }
+        }
+        return item
+      })
+    )
+  }
 
   const handleClickTypeSelector = () => {
     // Toggle the show state of the dropdown
@@ -31,8 +45,18 @@ export default function StepEditPanel({
       return
     }
     setType(newType)
+    if (newType === Keyword.Visit) {
+      // If the Visit dropdown item is clicked, fetch a new email and update step value & type
+      const { address } = await fetchEmail()
+      updateStep({ type: Keyword.Visit, value: address })
+    } else {
+      // If the InputValue dropdown item is clicked, update step value to "test" & type
+      updateStep({ type: Keyword.InputText, value: "test" })
+    }
   }
-  const handleChangeInput = () => {}
+  const handleChangeInput = (e: ChangeEvent<HTMLInputElement>) => {
+    updateStep({ type: Keyword.InputText, value: e.target.value })
+  }
   const handleClickCloseButton = () => {
     closeEditPanel()
   }

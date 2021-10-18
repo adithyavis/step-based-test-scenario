@@ -7,7 +7,7 @@ import StepCard from "../components/StepCard"
 import Arrow, { ARROW_HEAD_WIDTH } from "../components/Arrow"
 import StepEditPanel from "../components/StepEditPanel"
 import { GetServerSideProps, InferGetServerSidePropsType } from "next"
-import { Scenario } from "@iaf/api"
+import { Scenario, Step } from "@iaf/api"
 
 export const getServerSideProps: GetServerSideProps<
   Pick<Scenario, "name" | "steps">
@@ -19,8 +19,11 @@ export const getServerSideProps: GetServerSideProps<
 
 export default function Home({
   name,
-  steps,
+  // The initial steps fetched from the server, passed as stepsProp
+  steps: stepsProp,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
+  // Steps can be edited through the edit panel. Its initial value is set as stepsProp
+  const [steps, setSteps] = useState<Step[]>(stepsProp)
   // The ID of the step for which edit panel is open.
   // If edit panel is closed for all steps, editPanelStepId would be null
   const [editPanelStepId, setEditPanelStepId] = useState<string | null>(null)
@@ -64,7 +67,11 @@ export default function Home({
                 <StepEditPanelWrapper
                   data-testid={`edit-panel-wrapper-${step.id}`}
                 >
-                  <StepEditPanel step={step} closeEditPanel={closeEditPanel} />
+                  <StepEditPanel
+                    step={step}
+                    setSteps={setSteps}
+                    closeEditPanel={closeEditPanel}
+                  />
                 </StepEditPanelWrapper>
               )}
             </StepWrapper>
