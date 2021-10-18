@@ -4,12 +4,14 @@ import { Keyword, Step } from "@iaf/api"
 export default function StepCard({
   step,
   stepNumber,
+  onClick,
 }: {
   step: Step
   stepNumber: number
+  onClick: () => void
 }) {
   return (
-    <Wrapper>
+    <Wrapper onClick={onClick}>
       <StepNumber>{stepNumber}</StepNumber>
       <StepCardText>{getStepCardText(step)}</StepCardText>
     </Wrapper>
@@ -41,6 +43,7 @@ const Wrapper = styled.div`
   word-break: break-all;
   padding: 0.75rem;
   text-align: center;
+  cursor: pointer;
 `
 const StepNumber = styled.div`
   padding: 0.125rem 0.25rem;
