@@ -1,64 +1,29 @@
-# Frontend Interview Assignment
+# Step based test scenario
 
 ## Table of Contents
 
-- [Instruction](#Instruction)
+- [Overview](#Overview)
 - [Development](#Development)
 
-## Instruction
-
-### Do this first - Setup a repository for interviewing
-
-1. Create an initial commit with this starting project
-2. Create a private repository in your own GitHub account
-3. Push this project to that repository
-4. Invite @tai2 and @oguzgelal as a collaborator
+## Overview
 
 ### About the task
 
-We'd like you to implement a feature to a small application.
 The application included in this repo shows a test scenario for E2E testing in a step-by-step style.
 To make things simpler, it supports only two kinds of operation -- "Visit" some page and "Input" text to the page.
 
-The task is to make the text to input in "Input" steps editable.
+The tasks I have completed are-
 
-- Implement step edit panel in either `/packages/app-react` or `/packages/app-vue`
-  - Choose either React.js or Vue.js and work on the corresponding starting app we provide
-  - React.js is preferable, but if you feel a lot more confident in Vue.js, you can use that as well (that's why we provide a starting project in Vue.js as well to save you some time 😄)
-- The panel should look like the design we provide
+- Implement step edit panel in react
+- The panel looks like the provided design
 - The panel can be open when clicking on "Input" step.
-- The panel should be open _below the row of the open step_. You can see an example of the interaction at `/design/example.gif`.
+- The panel should be open _below the row of the open step_. An example of the interaction is at `/design/example.gif`.
 - When edit the text in the panel, the text in step card should also be updated
 - The type of input can be changed from `Given value`, which is a free text, to `Random email address`, which is an email address generated from the api.
 
-### What we provide
-
-- Basic project infrastructure
-- The design for the UI in `/design`
-  - Open `/design/index.html` in a browser to see the inspectable design
-- A page with step cards rendered
-  - Step data will be fetched from the server side on page request
-- An API to get a random email address
-
-### Rules
-
-- We'll test the website only on Chrome Stable for macOS, with the viewport size between 1280x800 to 1400x1050
-- You **cannot** modify `/packages/api`
-- You can add any dependency you want
-- You can modify the code, or project structure, however you want
-- You can reach out to us if you have any question
-- We'll judge the final result based on:
-  - How well the UI work, the UX when using it
-  - How accurate the UI is to the design
-  - How it being tested
-  - How the code is structured, its readability
-- Please add plenty of comments or write documents more than usual.
-  - Explain your intent precisely as if you explained it for novices.
-  - This can prevent overlooking your intent and reduce the possibility of misjudge.
-
 ## Development
 
-### Prerequisite
+### Prerequisites
 
 1. [Node.js 16.0.0](https://nodejs.org/en/) - The version is also specified in `.nvmrc`
 2. [Yarn 1.22.10](https://classic.yarnpkg.com/en/)
