@@ -66,7 +66,10 @@ export default function StepEditPanel({
       <Wrapper>
         <Title>Input Text</Title>
         <InputWrapper>
-          <TypeSelector onClick={handleClickTypeSelector}>
+          <TypeSelector
+            onClick={handleClickTypeSelector}
+            data-testid="edit-panel-type-selector"
+          >
             {getTypeText(type)}
           </TypeSelector>
           <>
@@ -78,6 +81,7 @@ export default function StepEditPanel({
                     onClick={() => {
                       handleClickDropdownItem(type)
                     }}
+                    data-testid={`edit-panel-dropdown-item-${type}`}
                   >
                     {getTypeText(type)}
                   </TypesDropdownItem>
@@ -89,9 +93,13 @@ export default function StepEditPanel({
             value={step.value}
             disabled={type === Keyword.Visit}
             onChange={handleChangeInput}
+            data-testid="edit-panel-input"
           />
         </InputWrapper>
-        <CloseButton onClick={handleClickCloseButton}>
+        <CloseButton
+          onClick={handleClickCloseButton}
+          data-testid="edit-panel-close-button"
+        >
           <FontAwesomeIcon icon={faTimes} size="lg" />
         </CloseButton>
       </Wrapper>
