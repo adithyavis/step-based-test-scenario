@@ -5,6 +5,7 @@ import Head from "next/head"
 import styled from "styled-components"
 import StepCard from "../components/StepCard"
 import Arrow, { ARROW_HEAD_WIDTH } from "../components/Arrow"
+import StepEditPanel from "../components/StepEditPanel"
 import { GetServerSideProps, InferGetServerSidePropsType } from "next"
 import { Scenario } from "@iaf/api"
 
@@ -63,7 +64,7 @@ export default function Home({
                 <StepEditPanelWrapper
                   data-testid={`edit-panel-wrapper-${step.id}`}
                 >
-                  <></>
+                  <StepEditPanel step={step} closeEditPanel={closeEditPanel} />
                 </StepEditPanelWrapper>
               )}
             </StepWrapper>
